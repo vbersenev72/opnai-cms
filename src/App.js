@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Auth from "./components/auth/auth";
-import { Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Menu from "./components/menu/menu";
 import Keys from "./components/keys/keys";
 
@@ -12,15 +12,22 @@ function App() {
 
   return (
     auth ?
-    <Routes>
-      <Route element={<Keys/>} path="/"/>
-      <Route path="/database" />
-      <Route path="/server"/>
-    </Routes>
+    <BrowserRouter>
+    <Menu/>
+      <Routes>
+        <Route element={<Keys/>} path="/"/>
+        <Route path="/database" />
+        <Route path="/server"/>
+      </Routes>
+    </BrowserRouter>
+
   :
+  <BrowserRouter>
     <Routes>
-      <Route element={<Auth setAuth={setAuth}/>} path="/"/>
+      <Route element={<Auth setAuth={setAuth}/>} path="*"/>
     </Routes>
+  </BrowserRouter>
+
 
 
   );

@@ -10,10 +10,6 @@ import Menu from './components/menu/menu';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Menu/>
     <App />
-  </BrowserRouter>
-
 );
 

@@ -7,6 +7,11 @@
 
 }
 
+.menu_container {
+    width: 300px;
+    height: 100vh;
+}
+
 a {
     text-decoration: none;
     color: rgb(58, 67, 75);

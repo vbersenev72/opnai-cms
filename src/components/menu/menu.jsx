@@ -11,6 +11,7 @@ import StorageIcon from '@mui/icons-material/Storage';
 import SourceIcon from '@mui/icons-material/Source';
 
 import './menu.css'
+import Keys from '../keys/keys';
 
 const Menu = () => {
 
@@ -18,36 +19,37 @@ const Menu = () => {
 
 
     return (
-        <div className='menu'>
-            <React.Fragment>
-                <a href='/'>
-                    <ListItemButton>
-                    <ListItemIcon>
-                        <VpnKeyIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Open AI API ключи" />
-                    </ListItemButton>
-                </a>
+        <div className='menu_container'>
+            <div className='menu'>
 
-                <a href="/server">
-                    <ListItemButton>
-                    <ListItemIcon>
-                        <StorageIcon/>
-                    </ListItemIcon>
-                    <ListItemText primary="Состояние сервера" />
-                    </ListItemButton>
-                </a>
+                    <a href='/'>
+                        <ListItemButton>
+                        <ListItemIcon>
+                            <VpnKeyIcon/>
+                        </ListItemIcon>
+                        <ListItemText primary="Open AI API ключи" />
+                        </ListItemButton>
+                    </a>
 
-                <a href="/database">
-                    <ListItemButton>
-                    <ListItemIcon>
-                        <SourceIcon />
-                    </ListItemIcon>
-                    <ListItemText primary="База данных" />
-                    </ListItemButton>
-                </a>
+                    <a href="/server">
+                        <ListItemButton>
+                        <ListItemIcon>
+                            <StorageIcon/>
+                        </ListItemIcon>
+                        <ListItemText primary="Состояние сервера" />
+                        </ListItemButton>
+                    </a>
 
-            </React.Fragment>
+                    <a href="/database">
+                        <ListItemButton>
+                        <ListItemIcon>
+                            <SourceIcon />
+                        </ListItemIcon>
+                        <ListItemText primary="Ошибки" />
+                        </ListItemButton>
+                    </a>
+            </div>
+
         </div>
 
     )
