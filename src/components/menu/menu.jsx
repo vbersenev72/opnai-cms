@@ -7,8 +7,7 @@ const MenuBar = () => {
     <header className='menu_container'>
       <div className='menu_links'>
         <nav className='link'><a href="/">Ключи OpenAI</a></nav>
-        <nav className='link'><a href="/server">Ошибки</a></nav>
-        <nav className='link'><a href="/database">База данных</a></nav>
+        <nav className='link'><a href="/errors">Ошибки</a></nav>
       </div>
     </header>
   );

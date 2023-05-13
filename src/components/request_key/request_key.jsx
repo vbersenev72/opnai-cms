@@ -1,21 +1,20 @@
+import './request_key.css'
 
-
-const requestKey = (props) => {
-
+const RequestKey = (props) => {
 
 
 
 
 	return (
-		<div>
-			{props.id}
+		<div className="request_key">
+			<h3>id: {props.props.request}</h3>
 			<br/>
-			{props.data}
+			<h4>Текст запроса: </h4><p>"{props.props.data}"</p>
 			<br/>
-			{props.date}
+			<h4>Дата запроса: </h4><p>"{props.props.date}"</p>
 			<br/>
 		</div>
 		)
 }
 
-export default requestKey;
+export default RequestKey;

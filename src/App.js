@@ -1,8 +1,9 @@
 import { useState } from "react";
 import Auth from "./components/auth/auth";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Keys from "./components/keys/keys";
+import Keys from "./components/keys/keys"
 import MenuBar from './components/menu/menu'
+import Errors from './components/errors/errors'
 
 function App() {
 
@@ -15,8 +16,8 @@ function App() {
     <MenuBar/>
       <Routes>
         <Route element={<Keys/>} path="/"/>
-        <Route path="/database" />
-        <Route path="/server"/>
+        <Route element={<Errors/>} path="/errors"/>
+        <Route element={<Keys/>} path="*"/>
       </Routes>
     </BrowserRouter>
 
