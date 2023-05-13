@@ -1,7 +1,18 @@
 .keys_container {
-    margin-left: 300px;
 
+    margin-top: 20px;
+    padding: 20px;
     display: flex;
+    justify-content: space-between;
 
     align-items: center;
+}
+
+.key {
+    padding: auto;
+    margin-left: 10px;
+    padding: 10px;
+
+    border: 1px solid black;
+    border-radius: 10px;
 }
