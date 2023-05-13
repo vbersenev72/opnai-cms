@@ -12,6 +12,7 @@ const Errors = () => {
     const getErrors = async () => {
         const response = await axios.get('http://localhost:5000/logs/errors')
         setErrors(response.data.message)
+        console.log(errors);
     }
 
     React.useEffect(() => {
