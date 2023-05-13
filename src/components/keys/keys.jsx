@@ -7,17 +7,17 @@ import axios from 'axios';
 
 
 const Keys = () => {
+    const [keyOne, setKeyOne] = React.useState('')
 
     const getKeys = async () => {
         const key1 = await axios.get('http://localhost:5000/keys/1')
-        const key2 = await axios.get('http://localhost:5000/keys/2')
         console.log(key1)
-        console.log(key2)
+        setKeyOne(key1.data.message)
     }
 
     React.useEffect(() => {
         getKeys()
-    }, [])
+    }, [getKeys])
 
 
     return (
@@ -26,12 +26,12 @@ const Keys = () => {
 
                 <div className="key">
                     <h1>Ключ 1</h1> <br/>
-                    контейнер 1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eum, cum error laudantium expedita nemo repellendus illo sapiente aspernatur modi, quasi itaque consequuntur? Corrupti amet suscipit velit neque facilis atque?
+                    {keyOne.map}
                 </div>
 
                 <div className="key">
                     <h1>Ключ 2</h1> <br/>
-                    контейнер 2 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam, eum, cum error laudantium expedita nemo repellendus illo sapiente aspernatur modi, quasi itaque consequuntur? Corrupti amet suscipit velit neque facilis atque?
+                    
                 </div>
 
             </div>
