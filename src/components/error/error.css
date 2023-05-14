@@ -3,17 +3,11 @@
         padding: auto;
 
         padding: 10px;
-        width: 90%;
+        width: 90vw;
 
         border: 1px solid black;
-}
+        text-align: center;
 
-.error {
-    word-wrap: break-word;
-    padding: auto;
-
-    padding: 10px;
-    width: 90%;
-
-    border: 1px solid black;
-}
+        margin-left: auto;
+        margin-right: auto;
+    }

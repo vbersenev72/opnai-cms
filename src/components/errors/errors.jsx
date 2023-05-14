@@ -1,5 +1,5 @@
 import axios from "axios"
-import React, { useState } from "react"
+import React, { useEffect, useState } from "react"
 import Error from "../error/error"
 
 import './errors.css'
@@ -7,24 +7,36 @@ import './errors.css'
 
 const Errors = () => {
 
-    const [errors, setErrors] = useState([])
+    const [errors, setErrors] = React.useState([])
 
-    const getErrors = async () => {
-        const response = await axios.get('http://localhost:5000/logs/errors')
-        setErrors(response.data.message)
-        console.log(errors);
-    }
 
-    React.useEffect(() => {
+
+
+    useEffect(()=>{
+
+        const getErrors = async () => {
+            const response = await axios.get('http://localhost:5000/logs/errors')
+
+            setErrors(errors.push(response.data.message))
+            setErrors(response.data.message)
+            setErrors(errors[0].reverse())
+            console.log(errors);
+
+
+        }
+
+
         getErrors()
+
     }, [])
+
 
 
     return (
     <div className="errors_container">
         <div className="errors">
             {
-                errors.map((error) => <Error props={error}/>)
+                errors.map((error) => <Error key={error.id} props={error}/>)
             }
         </div>
     </div>
