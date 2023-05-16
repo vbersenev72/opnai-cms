@@ -15,7 +15,7 @@ const Errors = () => {
     useEffect(()=>{
 
         const getErrors = async () => {
-            const response = await axios.get('http://localhost:5000/logs/errors')
+            const response = await axios.get('http://77.105.136.213:5000/logs/errors')
 
             setErrors(errors.push(response.data.message))
             setErrors(response.data.message)
