@@ -13,6 +13,9 @@ const RequestKey = (props) => {
 			<br/>
 			<h4>Дата запроса: </h4><p>"{props.props.date}"</p>
 			<br/>
+			<h4>ID пользователя: </h4><p>"{props.props.user_id}"</p>
+			<br/>
+			<h4>Ответ: </h4><p>"{props.props.response}"</p>
 		</div>
 		)
 }
