@@ -15,6 +15,12 @@ const RequestKey = (props) => {
 			<br/>
 			<h4>ID пользователя: </h4><p>"{props.props.user_id}"</p>
 			<br/>
+			<h4>Время генерации: </h4><p>"{props.props.time}"</p>
+			<br/>
+			<h4>Модель: </h4><p>"{props.props.model}"</p>
+			<br/>
+			<h4>Платформа: </h4><p>"{props.props.platform}"</p>
+			<br/>
 			<h4>Ответ: </h4><p>"{props.props.response}"</p>
 		</div>
 		)
