@@ -15,8 +15,8 @@ const Keys = () => {
         const key2 = await axios.get('http://77.105.136.213:5000/keys/2')
         console.log(key1)
 
-        const key1Copy = key1.data.message.reverse()
-        const key2Copy = key2.data.message.reverse()
+        const key1Copy = key1.data.message
+        const key2Copy = key2.data.message
 
         setKeyOne(key1Copy)
         setKeyTwo(key2Copy)
