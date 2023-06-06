@@ -19,7 +19,7 @@ const Errors = () => {
 
             setErrors(errors.push(response.data.message))
             setErrors(response.data.message)
-            setErrors(errors[0].reverse())
+            setErrors(errors[0])
             console.log(errors);
 
 
