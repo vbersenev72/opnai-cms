@@ -8,6 +8,7 @@ const MenuBar = () => {
       <div className='menu_links'>
         <nav className='link'><a href="/">Ключи OpenAI</a></nav>
         <nav className='link'><a href="/errors">Ошибки</a></nav>
+        <nav className='link'><a href="/requests_filter">Запросы</a></nav>
       </div>
     </header>
   );

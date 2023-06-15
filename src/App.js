@@ -4,6 +4,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Keys from "./components/keys/keys"
 import MenuBar from './components/menu/menu'
 import Errors from './components/errors/errors'
+import Requests_filter from "./components/requests_filter/requests_filter";
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
       <Routes>
         <Route element={<Keys/>} path="/"/>
         <Route element={<Errors/>} path="/errors"/>
+        <Route element={<Requests_filter/>} path="/requests_filter"/>
         <Route element={<Keys/>} path="*"/>
       </Routes>
     </BrowserRouter>
