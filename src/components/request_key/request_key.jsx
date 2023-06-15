@@ -21,6 +21,10 @@ const RequestKey = (props) => {
 			<br/>
 			<h4>Платформа: </h4><p>"{props.props.platform}"</p>
 			<br/>
+			<h4>Версия: </h4><p>"{props.props.version}"</p>
+			<br/>
+			<h4>Подписан: </h4><p>"{props.props.is_subscribe ? "Да" : "Нет"}"</p>
+			<br/>
 			<h4>Ответ: </h4><p>"{props.props.response}"</p>
 		</div>
 		)
