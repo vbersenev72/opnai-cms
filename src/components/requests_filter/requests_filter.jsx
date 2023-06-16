@@ -71,8 +71,6 @@ const Requests_filter = () => {
         errs
       };
 
-
-
     } else {
       const filteredObjects = subscribed.filter((obj) => obj.date.substring(0, 10) === date);
       const queries = filteredObjects.map((obj) => obj.data)
@@ -131,6 +129,7 @@ const Requests_filter = () => {
               <th>Количество символов (запрос)</th>
               <th>Количество символов (ответ)</th>
               <th>Ошибки</th>
+              <th>Среднее время ответа</th>
             </tr>
           </thead>
           <tbody>
@@ -142,6 +141,7 @@ const Requests_filter = () => {
                 <td>{(((item.totalChars)/item.queries.length))=='NaN'? (item.totalChars)/item.queries.length : item.totalResponseChars/item.responses.length*0.07 }</td>
                 <td>{(item.totalResponseChars)/item.responses.length}</td>
                 <td>{item.errs.length}</td>
+                <td>{item.time/item.time?.length}</td>
               </tr>
               ))}
           </tbody>
