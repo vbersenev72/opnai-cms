@@ -16,6 +16,12 @@ table {
     font-weight: bold;
   }
 
+  .Datepicker {
+    display: block;
+  }
+  
+
+
   @media (max-width: 767px) {
     table {
       font-size: 0.9em;
